@@ -1,0 +1,5 @@
+steps:
+  - label: "build"
+    key: build
+    commands: 
+      - fly whoami
