@@ -2,10 +2,11 @@ steps:
   - label: ":semgrep: Semgrep OSS"
     key: semgrep
     commands:
-      - semgrep scan --config auto
+      - semgrep scan --config auto --metrics=off
     plugins:
       - docker#v5.11.0:
           image: semgrep/semgrep
+          debug: true
   - label: "deploy"
     key: deploy
     commands: 
