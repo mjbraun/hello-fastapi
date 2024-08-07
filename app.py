@@ -4,4 +4,4 @@ app = FastAPI()
 
 @app.get("/")
 def index():
-    return {"message": "Hello, Semgrep!"}
+    return {"message": "Hello, Semgrep Debug!"}
