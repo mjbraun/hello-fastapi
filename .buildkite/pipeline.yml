@@ -1,11 +1,11 @@
 steps:
-  - label: "build"
-    key: build
-    commands: 
-      - fly deploy -a hello-fastapi
   - label: ":semgrep: Semgrep OSS"
     commands:
       - semgrep scan --config auto
     plugins:
       - docker#v5.11.0:
           image: semgrep/semgrep
+  - label: "build"
+    key: build
+    commands: 
+      - fly deploy -a hello-fastapi
