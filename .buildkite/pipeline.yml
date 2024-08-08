@@ -2,7 +2,7 @@ steps:
   - label: ":semgrep: Semgrep OSS"
     key: semgrep
     commands:
-      - semgrep scan --config auto --debug
+      - semgrep scan --config ci --debug
     plugins:
       - docker#v5.11.0:
           image: semgrep/semgrep
